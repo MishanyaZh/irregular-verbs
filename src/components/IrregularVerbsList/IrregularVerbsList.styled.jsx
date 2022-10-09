@@ -35,7 +35,6 @@ export const StyledTableCell = styled(TableCell)`
 
 export const Container = styled.div`
   margin: 0 auto;
-  padding: 5px;
 `;
 
 export const Actions = styled.div`

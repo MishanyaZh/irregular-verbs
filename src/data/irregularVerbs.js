@@ -199,8 +199,8 @@ export const irregularVerbs = [
   },
   {
     base: 'dream',
-    pastSimple: 'dreamt/dreamed',
-    pastParticiple: 'dreamt/dreamed',
+    pastSimple: 'dreamt',
+    pastParticiple: 'dreamt',
     translate: 'мріяти',
   },
   {
@@ -385,14 +385,14 @@ export const irregularVerbs = [
   },
   {
     base: 'lean',
-    pastSimple: 'leant/leaned',
-    pastParticiple: 'leant/leaned',
+    pastSimple: 'leant',
+    pastParticiple: 'leant',
     translate: 'нахилятися',
   },
   {
     base: 'learn',
-    pastSimple: 'learnt/learned',
-    pastParticiple: 'learnt/learned',
+    pastSimple: 'learnt',
+    pastParticiple: 'learnt',
     translate: 'вчити',
   },
   {
