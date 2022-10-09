@@ -1,45 +1,55 @@
 import styled from '@emotion/styled';
-import Table from '@mui/material/Table';
+
 import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
+import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+
+export const StyledTableRow = styled(TableRow)`
+  :nth-of-type(odd) {
+    background-color: #dbd9d9;
+  }
+  :last-child td,
+  :last-child th {
+    border: 0;
+  }
+  :hover,
+  :focus {
+    background-color: yellowgreen;
+  }
+`;
 
 export const StyledTableHead = styled(TableHead)`
   background-color: grey;
   color: white;
 `;
 export const StyledTableCellHead = styled(TableCell)`
-  padding: 8px;
+  text-align: center;
+
+  padding: 10px 0px 10px 5px;
   color: white;
+  cursor: pointer;
 `;
 export const StyledTableCell = styled(TableCell)`
-  padding: 8px;
+  text-align: center;
+  padding: 5px 0px 5px 2px;
 `;
 
-export const Box = styled.div`
+export const StyledTableBody = styled(TableBody)`
+  /* padding: 8px; */
+`;
+
+export const Container = styled.div`
   margin: 0 auto;
-  /* min-width: 400px; */
-  /* max-width: 300px; */
+  padding: 5px;
 `;
-export const Ul = styled.ul`
-  margin: 0;
-  padding: 0;
-  background-color: tomato;
-`;
-export const Li = styled.li`
-  margin: 0;
-  padding: 0;
+
+export const Actions = styled.div`
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-color: grey;
-`;
-export const Word = styled.p`
-  margin: 0;
-  padding: 0;
-  display: flex;
-  text-align: center;
+  justify-content: center;
+  background-color: #8a9599;
+  border-radius: 5px;
 `;

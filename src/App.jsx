@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <header>
-        <Header>IrregularVerbsList</Header>
+        <Header>Irregular Verbs List</Header>
       </header>
       <IrregularVerbsList />
     </div>
