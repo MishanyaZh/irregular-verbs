@@ -9,6 +9,8 @@ import {
   Actions,
 } from './IrregularVerbsList.styled';
 
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
@@ -25,8 +27,19 @@ import TextField from '@mui/material/TextField';
 
 const IrregularVerbsList = () => {
   const [data, setData] = useState(irregularVerbs);
-  const [inputValue, setInputValue] = useState('');
   const [filteredData, setFilteredData] = useState(data);
+
+  const [inputValue, setInputValue] = useState('');
+  const [id, setId] = useState('');
+
+  const [state, setState] = useState({
+    verbs: true,
+    translate: true,
+  });
+
+  const hendleClickVisible = index => {
+    setId(index);
+  };
 
   const getFilteredData = e => {
     const target = e.target.value;
@@ -37,16 +50,12 @@ const IrregularVerbsList = () => {
     setFilteredData(filter);
   };
 
-  const [state, setState] = useState({
-    verbs: true,
-    translate: true,
-  });
-
   const handleChange = event => {
     setState({
       ...state,
       [event.target.name]: event.target.checked,
     });
+    setId('');
   };
 
   return (
@@ -107,17 +116,34 @@ const IrregularVerbsList = () => {
           <TableBody>
             {filteredData.map((verb, index) => (
               <StyledTableRow key={index}>
-                <StyledTableCell>
-                  {state.verbs ? verb.base : '----------'}
+                <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                  {state.verbs || index === id ? (
+                    verb.base
+                  ) : (
+                    <RemoveRedEyeIcon />
+                  )}
                 </StyledTableCell>
-                <StyledTableCell>
-                  {state.verbs ? verb.pastSimple : '----------'}
+                <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                  {state.verbs || index === id ? (
+                    verb.pastSimple
+                  ) : (
+                    <RemoveRedEyeIcon />
+                  )}
                 </StyledTableCell>
-                <StyledTableCell>
-                  {state.verbs ? verb.pastParticiple : '----------'}
+                <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                  {state.verbs || index === id ? (
+                    verb.pastParticiple
+                  ) : (
+                    <RemoveRedEyeIcon />
+                  )}
                 </StyledTableCell>
-                <StyledTableCell>
-                  {state.translate ? verb.translate : '------'}
+
+                <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                  {state.translate || index === id ? (
+                    verb.translate
+                  ) : (
+                    <RemoveRedEyeIcon />
+                  )}
                 </StyledTableCell>
               </StyledTableRow>
             ))}
