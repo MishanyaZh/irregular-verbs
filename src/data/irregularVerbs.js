@@ -41,36 +41,36 @@ export const irregularVerbs = [
     pastParticiple: 'begun',
     translate: 'починати(ся)',
   },
-  {
-    base: 'bend',
-    pastSimple: 'bent',
-    pastParticiple: 'bent',
-    translate: 'гнути',
-  },
+  // {
+  //   base: 'bend',
+  //   pastSimple: 'bent',
+  //   pastParticiple: 'bent',
+  //   translate: 'гнути',
+  // },
   {
     base: 'bet',
     pastSimple: 'bet',
     pastParticiple: 'bet',
     translate: 'парі',
   },
-  {
-    base: 'bind',
-    pastSimple: 'bound',
-    pastParticiple: 'bound',
-    translate: "пов'язувати",
-  },
+  // {
+  //   base: 'bind',
+  //   pastSimple: 'bound',
+  //   pastParticiple: 'bound',
+  //   translate: "пов'язувати",
+  // },
   {
     base: 'bite',
     pastSimple: 'bit',
     pastParticiple: 'bitten',
     translate: 'кусати(ся)',
   },
-  {
-    base: 'bleed',
-    pastSimple: 'bled',
-    pastParticiple: 'bled',
-    translate: 'кровоточити',
-  },
+  // {
+  //   base: 'bleed',
+  //   pastSimple: 'bled',
+  //   pastParticiple: 'bled',
+  //   translate: 'кровоточити',
+  // },
   {
     base: 'blow',
     pastSimple: 'blew',
@@ -109,8 +109,8 @@ export const irregularVerbs = [
   },
   {
     base: 'burn',
-    pastSimple: 'burnt/burned',
-    pastParticiple: 'burnt/burned',
+    pastSimple: 'burnt',
+    pastParticiple: 'burnt',
     translate: 'горіти',
   },
   {
@@ -179,12 +179,12 @@ export const irregularVerbs = [
     pastParticiple: 'dealt',
     translate: 'відпускати',
   },
-  {
-    base: 'dig',
-    pastSimple: 'dug',
-    pastParticiple: 'dug',
-    translate: 'копати',
-  },
+  // {
+  //   base: 'dig',
+  //   pastSimple: 'dug',
+  //   pastParticiple: 'dug',
+  //   translate: 'копати',
+  // },
   {
     base: 'do',
     pastSimple: 'did',
@@ -421,8 +421,8 @@ export const irregularVerbs = [
   },
   {
     base: 'light',
-    pastSimple: 'lit/lighted',
-    pastParticiple: 'lit/lighted',
+    pastSimple: 'lit',
+    pastParticiple: 'lit',
     translate: 'запалювати',
   },
   {
@@ -458,7 +458,7 @@ export const irregularVerbs = [
   {
     base: 'mow',
     pastSimple: 'mowed',
-    pastParticiple: 'mown/mowed',
+    pastParticiple: 'mown',
     translate: 'косити',
   },
   {
@@ -518,7 +518,7 @@ export const irregularVerbs = [
   {
     base: 'saw',
     pastSimple: 'sawed',
-    pastParticiple: 'sawn/sawed',
+    pastParticiple: 'sawn',
     translate: 'пила',
   },
   {
@@ -554,7 +554,7 @@ export const irregularVerbs = [
   {
     base: 'sew',
     pastSimple: 'sewed',
-    pastParticiple: 'sewn/sewed',
+    pastParticiple: 'sewn',
     translate: 'шити',
   },
   {
@@ -644,7 +644,7 @@ export const irregularVerbs = [
   {
     base: 'sow',
     pastSimple: 'sowed',
-    pastParticiple: 'sown/sowed',
+    pastParticiple: 'sown',
     translate: 'засівати',
   },
   {
@@ -655,8 +655,8 @@ export const irregularVerbs = [
   },
   {
     base: 'spell',
-    pastSimple: 'spelt/spelled',
-    pastParticiple: 'spelt/spelled',
+    pastSimple: 'spelt',
+    pastParticiple: 'spelt',
     translate: 'вимовляти',
   },
   {
@@ -667,8 +667,8 @@ export const irregularVerbs = [
   },
   {
     base: 'spill',
-    pastSimple: 'spilt/spilled',
-    pastParticiple: 'spilt/spilled',
+    pastSimple: 'spilt',
+    pastParticiple: 'spilt',
     translate: 'проливати',
   },
   {
@@ -677,12 +677,12 @@ export const irregularVerbs = [
     pastParticiple: 'spat',
     translate: 'плювати',
   },
-  {
-    base: 'split',
-    pastSimple: 'split',
-    pastParticiple: 'split',
-    translate: 'розщеплювати',
-  },
+  // {
+  //   base: 'split',
+  //   pastSimple: 'split',
+  //   pastParticiple: 'split',
+  //   translate: 'розщеплювати',
+  // },
   {
     base: 'spoil',
     pastSimple: 'spoilt',
@@ -713,24 +713,24 @@ export const irregularVerbs = [
     pastParticiple: 'stuck',
     translate: 'приклеювати(ся),',
   },
-  {
-    base: 'sting',
-    pastSimple: 'stung',
-    pastParticiple: 'stung',
-    translate: 'жалити',
-  },
+  // {
+  //   base: 'sting',
+  //   pastSimple: 'stung',
+  //   pastParticiple: 'stung',
+  //   translate: 'жалити',
+  // },
   {
     base: 'stink',
     pastSimple: 'stank',
     pastParticiple: 'stunk',
     translate: 'сморід',
   },
-  {
-    base: 'strike',
-    pastSimple: 'struck',
-    pastParticiple: 'struck',
-    translate: 'ударяти',
-  },
+  // {
+  //   base: 'strike',
+  //   pastSimple: 'struck',
+  //   pastParticiple: 'struck',
+  //   translate: 'ударяти',
+  // },
   {
     base: 'swear',
     pastSimple: 'swore',
@@ -743,18 +743,18 @@ export const irregularVerbs = [
     pastParticiple: 'striven',
     translate: 'прагнути',
   },
-  {
-    base: 'sweep',
-    pastSimple: 'swept',
-    pastParticiple: 'swept',
-    translate: 'підмітати',
-  },
-  {
-    base: 'swell',
-    pastSimple: 'swelled',
-    pastParticiple: 'swollen/swelled',
-    translate: 'набухати',
-  },
+  // {
+  //   base: 'sweep',
+  //   pastSimple: 'swept',
+  //   pastParticiple: 'swept',
+  //   translate: 'підмітати',
+  // },
+  // {
+  //   base: 'swell',
+  //   pastSimple: 'swelled',
+  //   pastParticiple: 'swollen/swelled',
+  //   translate: 'набухати',
+  // },
   {
     base: 'swim',
     pastSimple: 'swam',
@@ -827,12 +827,12 @@ export const irregularVerbs = [
     pastParticiple: 'worn',
     translate: 'носити',
   },
-  {
-    base: 'weep',
-    pastSimple: 'wept',
-    pastParticiple: 'wept',
-    translate: 'плакати',
-  },
+  // {
+  //   base: 'weep',
+  //   pastSimple: 'wept',
+  //   pastParticiple: 'wept',
+  //   translate: 'плакати',
+  // },
   {
     base: 'will',
     pastSimple: 'would',
@@ -845,12 +845,12 @@ export const irregularVerbs = [
     pastParticiple: 'won',
     translate: 'перемагати',
   },
-  {
-    base: 'wind',
-    pastSimple: 'wound',
-    pastParticiple: 'wound',
-    translate: 'обмотувати',
-  },
+  // {
+  //   base: 'wind',
+  //   pastSimple: 'wound',
+  //   pastParticiple: 'wound',
+  //   translate: 'обмотувати',
+  // },
   {
     base: 'write',
     pastSimple: 'wrote',

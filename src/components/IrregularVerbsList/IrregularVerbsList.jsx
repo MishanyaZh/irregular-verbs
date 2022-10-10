@@ -41,11 +41,20 @@ const IrregularVerbsList = () => {
     setId(index);
   };
 
+  const filterDataAndTargetValue = (target, data) => {
+    return data.toLocaleLowerCase().includes(target.toLocaleLowerCase());
+  };
+
   const getFilteredData = e => {
     const target = e.target.value;
     setInputValue(target);
-    const filter = data.filter(v =>
-      v.base.toLocaleLowerCase().includes(target.toLocaleLowerCase()),
+
+    const filter = data.filter(
+      ({ base, translate, pastParticiple, pastSimple }) =>
+        filterDataAndTargetValue(target, base) ||
+        filterDataAndTargetValue(target, translate) ||
+        filterDataAndTargetValue(target, pastParticiple) ||
+        filterDataAndTargetValue(target, pastSimple),
     );
     setFilteredData(filter);
   };
@@ -57,7 +66,9 @@ const IrregularVerbsList = () => {
     });
     setId('');
   };
-
+  const getVisibleVerbs = (curentState, index, verb) => {
+    return curentState || index === id ? verb : <RemoveRedEyeIcon />;
+  };
   return (
     <Container>
       <Actions>
@@ -114,39 +125,24 @@ const IrregularVerbsList = () => {
             </TableRow>
           </StyledTableHead>
           <TableBody>
-            {filteredData.map((verb, index) => (
-              <StyledTableRow key={index}>
-                <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                  {state.verbs || index === id ? (
-                    verb.base
-                  ) : (
-                    <RemoveRedEyeIcon />
-                  )}
-                </StyledTableCell>
-                <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                  {state.verbs || index === id ? (
-                    verb.pastSimple
-                  ) : (
-                    <RemoveRedEyeIcon />
-                  )}
-                </StyledTableCell>
-                <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                  {state.verbs || index === id ? (
-                    verb.pastParticiple
-                  ) : (
-                    <RemoveRedEyeIcon />
-                  )}
-                </StyledTableCell>
-
-                <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                  {state.translate || index === id ? (
-                    verb.translate
-                  ) : (
-                    <RemoveRedEyeIcon />
-                  )}
-                </StyledTableCell>
-              </StyledTableRow>
-            ))}
+            {filteredData.map(
+              ({ base, pastSimple, pastParticiple, translate }, index) => (
+                <StyledTableRow key={index}>
+                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                    {getVisibleVerbs(state.verbs, index, base)}
+                  </StyledTableCell>
+                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                    {getVisibleVerbs(state.verbs, index, pastSimple)}
+                  </StyledTableCell>
+                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                    {getVisibleVerbs(state.verbs, index, pastParticiple)}
+                  </StyledTableCell>
+                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                    {getVisibleVerbs(state.translate, index, translate)}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ),
+            )}
           </TableBody>
         </Table>
       </TableContainer>
