@@ -4,4 +4,5 @@ export const Header = styled.h1`
 `;
 export const Info = styled.div`
   text-align: center;
+  margin-bottom: 3px;
 `;

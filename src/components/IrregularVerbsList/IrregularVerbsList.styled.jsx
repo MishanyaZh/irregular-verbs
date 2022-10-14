@@ -30,6 +30,8 @@ export const StyledTableCellHead = styled(TableCell)`
 `;
 export const StyledTableCell = styled(TableCell)`
   text-align: center;
+  height: 30px;
+  width: 90px;
   padding: 10px 0px 10px 2px;
 `;
 
