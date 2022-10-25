@@ -9,26 +9,26 @@
     "D:\\GoIt\\githupreposet\\irregular-verbs\\src\\components\\Hero\\Hero.styled.jsx": "7"
   },
   {
-    "size": 244,
-    "mtime": 1666259000557,
+    "size": 313,
+    "mtime": 1666691470520,
     "results": "8",
     "hashOfConfig": "9"
   },
   {
-    "size": 38,
-    "mtime": 1666258901177,
+    "size": 122,
+    "mtime": 1666691470700,
     "results": "10",
     "hashOfConfig": "9"
   },
   {
-    "size": 4828,
-    "mtime": 1665430752847,
+    "size": 4813,
+    "mtime": 1666696047730,
     "results": "11",
     "hashOfConfig": "9"
   },
   {
-    "size": 1054,
-    "mtime": 1666693452544,
+    "size": 1076,
+    "mtime": 1666696096246,
     "results": "12",
     "hashOfConfig": "9"
   },
@@ -63,10 +63,9 @@
     "filePath": "18",
     "messages": "19",
     "errorCount": 0,
-    "warningCount": 1,
+    "warningCount": 0,
     "fixableErrorCount": 0,
-    "fixableWarningCount": 0,
-    "source": null
+    "fixableWarningCount": 0
   },
   {
     "filePath": "20",
@@ -112,12 +111,10 @@
   "D:\\GoIt\\githupreposet\\irregular-verbs\\src\\App.jsx",
   [],
   "D:\\GoIt\\githupreposet\\irregular-verbs\\src\\App.styled.jsx",
-  [
-    "30"
-  ],
+  [],
   "D:\\GoIt\\githupreposet\\irregular-verbs\\src\\components\\IrregularVerbsList\\IrregularVerbsList.jsx",
   [
-    "31"
+    "30"
   ],
   "D:\\GoIt\\githupreposet\\irregular-verbs\\src\\components\\IrregularVerbsList\\IrregularVerbsList.styled.jsx",
   [],
@@ -128,30 +125,18 @@
   "D:\\GoIt\\githupreposet\\irregular-verbs\\src\\components\\Hero\\Hero.styled.jsx",
   [],
   {
-    "ruleId": "32",
+    "ruleId": "31",
     "severity": 1,
-    "message": "33",
-    "line": 1,
-    "column": 8,
-    "nodeType": "34",
-    "messageId": "35",
-    "endLine": 1,
-    "endColumn": 14
-  },
-  {
-    "ruleId": "32",
-    "severity": 1,
-    "message": "36",
+    "message": "32",
     "line": 29,
     "column": 16,
-    "nodeType": "34",
-    "messageId": "35",
+    "nodeType": "33",
+    "messageId": "34",
     "endLine": 29,
     "endColumn": 23
   },
   "no-unused-vars",
-  "'styled' is defined but never used.",
+  "'setData' is assigned a value but never used.",
   "Identifier",
-  "unusedVar",
-  "'setData' is assigned a value but never used."
+  "unusedVar"
 ]
