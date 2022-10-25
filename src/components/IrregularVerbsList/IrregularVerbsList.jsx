@@ -72,6 +72,23 @@ const IrregularVerbsList = () => {
   return (
     <Container>
       <Actions>
+        <Box
+          component="form"
+          sx={{
+            '& > :not(style)': { m: 1 },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            onChange={getFilteredData}
+            value={inputValue}
+            id="standard-search"
+            label="Search Verbs"
+            type="search"
+            variant="outlined"
+          />
+        </Box>
         <FormControl component="fieldset" variant="standard">
           <FormGroup>
             <FormControlLabel
@@ -96,23 +113,6 @@ const IrregularVerbsList = () => {
             />
           </FormGroup>
         </FormControl>
-        <Box
-          component="form"
-          sx={{
-            '& > :not(style)': { m: 1, width: '25ch' },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField
-            onChange={getFilteredData}
-            value={inputValue}
-            id="standard-search"
-            label="Search Verbs"
-            type="search"
-            variant="outlined"
-          />
-        </Box>
       </Actions>
       <TableContainer component={Paper}>
         <Table aria-label="customized table">
