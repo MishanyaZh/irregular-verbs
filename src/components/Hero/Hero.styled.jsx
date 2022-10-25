@@ -13,5 +13,5 @@ export const Header = styled.h1`
 `;
 export const Info = styled.div`
   text-align: center;
-  padding-bottom: 3px;
+  padding-bottom: 5px;
 `;
