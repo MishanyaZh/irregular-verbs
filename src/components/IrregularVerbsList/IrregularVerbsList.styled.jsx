@@ -28,6 +28,7 @@ export const StyledTableCellHead = styled(TableCell)`
   color: white;
   cursor: pointer;
   line-height: normal;
+  border-bottom: none;
 `;
 export const StyledTableCell = styled(TableCell)`
   text-align: center;
