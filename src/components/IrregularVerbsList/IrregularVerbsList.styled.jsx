@@ -45,6 +45,8 @@ export const Actions = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  padding-right: 8px;
   background-color: #8a9599;
   border-radius: 5px;
 `;
