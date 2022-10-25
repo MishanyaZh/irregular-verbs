@@ -1,9 +1,9 @@
 import React from 'react';
-import { Header, Info } from './Hero.styled';
+import { BoxHeader, Header, Info } from './Hero.styled';
 
 const Hero = () => {
   return (
-    <header>
+    <BoxHeader>
       <Header>Irregular Verbs List</Header>
       <Info>
         <span> suggestions for improvement </span>
@@ -11,7 +11,7 @@ const Hero = () => {
           Mishanya Zholondkovskyi
         </a>
       </Info>
-    </header>
+    </BoxHeader>
   );
 };
 
