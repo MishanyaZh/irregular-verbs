@@ -24,9 +24,10 @@ export const StyledTableHead = styled(TableHead)`
 `;
 export const StyledTableCellHead = styled(TableCell)`
   text-align: center;
-  padding: 15px 0px 15px 5px;
+  padding: 15px 0px 15px 0px;
   color: white;
   cursor: pointer;
+  line-height: normal;
 `;
 export const StyledTableCell = styled(TableCell)`
   text-align: center;
