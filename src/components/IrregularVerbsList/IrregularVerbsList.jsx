@@ -1,32 +1,24 @@
 import React, { useState } from 'react';
 import { irregularVerbs } from '../../data/irregularVerbs';
+
+import Actions from './Actions/Actions';
+
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import {
   Container,
   StyledTableHead,
   StyledTableCellHead,
   StyledTableCell,
   StyledTableRow,
-  Actions,
 } from './IrregularVerbsList.styled';
 
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-
-import FormControl from '@mui/material/FormControl';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-
 const IrregularVerbsList = () => {
-  const [data, setData] = useState(irregularVerbs);
+  const [data] = useState(irregularVerbs);
   const [filteredData, setFilteredData] = useState(data);
 
   const [inputValue, setInputValue] = useState('');
@@ -41,22 +33,23 @@ const IrregularVerbsList = () => {
     setId(index);
   };
 
-  const filterDataAndTargetValue = (target, data) => {
+  const getDataIncludesTargetValue = (target, data) => {
     return data.toLocaleLowerCase().includes(target.toLocaleLowerCase());
   };
 
   const getFilteredData = e => {
-    const target = e.target.value;
+    const target = e.target.value.trim();
     setInputValue(target);
 
-    const filter = data.filter(
-      ({ base, translate, pastParticiple, pastSimple }) =>
-        filterDataAndTargetValue(target, base) ||
-        filterDataAndTargetValue(target, translate) ||
-        filterDataAndTargetValue(target, pastParticiple) ||
-        filterDataAndTargetValue(target, pastSimple),
+    setFilteredData(
+      data.filter(
+        ({ base, translate, pastParticiple, pastSimple }) =>
+          getDataIncludesTargetValue(target, base) ||
+          getDataIncludesTargetValue(target, translate) ||
+          getDataIncludesTargetValue(target, pastParticiple) ||
+          getDataIncludesTargetValue(target, pastSimple),
+      ),
     );
-    setFilteredData(filter);
   };
 
   const handleChange = event => {
@@ -71,49 +64,13 @@ const IrregularVerbsList = () => {
   };
   return (
     <Container>
-      <Actions>
-        <Box
-          component="form"
-          sx={{
-            '& > :not(style)': { m: 1 },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField
-            onChange={getFilteredData}
-            value={inputValue}
-            id="standard-search"
-            label="Search Verbs"
-            type="search"
-            variant="outlined"
-          />
-        </Box>
-        <FormControl component="fieldset" variant="standard">
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={state.verbs}
-                  onChange={handleChange}
-                  name="verbs"
-                />
-              }
-              label="verbs"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={state.translate}
-                  onChange={handleChange}
-                  name="translate"
-                />
-              }
-              label="translate"
-            />
-          </FormGroup>
-        </FormControl>
-      </Actions>
+      <Actions
+        getFilteredData={getFilteredData}
+        inputValue={inputValue}
+        handleChange={handleChange}
+        verbs={state.verbs}
+        translate={state.translate}
+      />
       <TableContainer component={Paper}>
         <Table aria-label="customized table">
           <StyledTableHead>
