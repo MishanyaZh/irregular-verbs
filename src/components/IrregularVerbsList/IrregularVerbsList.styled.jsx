@@ -5,6 +5,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
 export const StyledTableRow = styled(TableRow)`
+  width: 100%;
   :nth-of-type(odd) {
     background-color: #dbd9d9;
   }
@@ -31,24 +32,12 @@ export const StyledTableCellHead = styled(TableCell)`
   border-bottom: none;
 `;
 export const StyledTableCell = styled(TableCell)`
+  width: 25%;
   text-align: center;
   height: 30px;
-  width: 90px;
   padding: 10px 0px 10px 2px;
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
-`;
-
-export const Actions = styled.div`
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-right: 8px;
-  background-color: #8a9599;
-  border-radius: 5px;
 `;
