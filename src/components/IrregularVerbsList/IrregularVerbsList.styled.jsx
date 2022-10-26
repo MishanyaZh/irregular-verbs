@@ -32,7 +32,7 @@ export const StyledTableCellHead = styled(TableCell)`
   border-bottom: none;
 `;
 export const StyledTableCell = styled(TableCell)`
-  min-width: 90px;
+  min-width: 60px;
   width: 25%;
   text-align: center;
   height: 30px;
