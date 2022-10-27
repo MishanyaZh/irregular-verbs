@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { irregularVerbs } from '../../data/irregularVerbs';
+import { tableHeaderData } from './utils';
 
 import Actions from './Actions/Actions';
 
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
@@ -15,6 +15,7 @@ import {
   StyledTableCellHead,
   StyledTableCell,
   StyledTableRow,
+  StyledEyeIcon,
 } from './IrregularVerbsList.styled';
 
 const IrregularVerbsList = () => {
@@ -59,9 +60,11 @@ const IrregularVerbsList = () => {
     });
     setId('');
   };
+
   const getVisibleVerbs = (curentState, index, verb) => {
-    return curentState || index === id ? verb : <RemoveRedEyeIcon />;
+    return curentState || index === id ? verb : <StyledEyeIcon />;
   };
+
   return (
     <Container>
       <Actions
@@ -75,10 +78,9 @@ const IrregularVerbsList = () => {
         <Table aria-label="customized table">
           <StyledTableHead>
             <TableRow>
-              <StyledTableCellHead>Base</StyledTableCellHead>
-              <StyledTableCellHead>Past Simple</StyledTableCellHead>
-              <StyledTableCellHead>Past Participle</StyledTableCellHead>
-              <StyledTableCellHead>Translate</StyledTableCellHead>
+              {tableHeaderData.map((item, index) => (
+                <StyledTableCellHead key={index}>{item}</StyledTableCellHead>
+              ))}
             </TableRow>
           </StyledTableHead>
           <TableBody>
