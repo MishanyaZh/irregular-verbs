@@ -6,9 +6,9 @@ const Hero = () => {
     <BoxHeader>
       <Header>Irregular Verbs List</Header>
       <Info>
-        <span> suggestions for improvement </span>
+        <span>for comments and suggestions </span>
         <a target="_blank" href="https://t.me/Mishanya_Zh" rel="noreferrer">
-          Mishanya Zholondkovskyi
+          Author
         </a>
       </Info>
     </BoxHeader>
