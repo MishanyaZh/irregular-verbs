@@ -9,6 +9,11 @@ export const BottomBox = styled.div`
   font-size: 3rem;
   z-index: 1;
   opacity: 0.7;
+  :hover,
+  :focus,
+  :active {
+    opacity: 1;
+  }
 `;
 
 export const Button = styled.button`
