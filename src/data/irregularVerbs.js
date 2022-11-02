@@ -99,7 +99,7 @@ export const irregularVerbs = [
     base: 'broadcast',
     pastSimple: 'broadcast',
     pastParticiple: 'broadcast',
-    translate: 'передавати',
+    translate: 'транслювати',
   },
   {
     base: 'build',
@@ -129,7 +129,7 @@ export const irregularVerbs = [
     base: 'can',
     pastSimple: 'could',
     pastParticiple: 'been able',
-    translate: 'може',
+    translate: 'могти',
   },
   {
     base: 'catch',
@@ -165,7 +165,7 @@ export const irregularVerbs = [
     base: 'creep',
     pastSimple: 'crept',
     pastParticiple: 'crept',
-    translate: 'повзучість',
+    translate: 'повзти',
   },
   {
     base: 'cut',
