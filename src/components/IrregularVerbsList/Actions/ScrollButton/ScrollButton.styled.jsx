@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const BottomBox = styled.div`
   position: fixed;
   width: 100%;
-  left: 50%;
+  text-align: center;
   bottom: 40px;
   height: 20px;
   font-size: 3rem;
@@ -16,6 +16,7 @@ export const Button = styled.button`
   color: #1976d2;
   background-color: rgb(136, 175, 214);
   cursor: pointer;
+  box-shadow: 0 0 20px 5px rgb(136, 175, 214);
 
   :hover,
   :focus,
@@ -23,5 +24,6 @@ export const Button = styled.button`
     color: yellowgreen;
     border-color: yellowgreen;
     background-color: #1976d2;
+    box-shadow: 0 0 20px 5px yellowgreen;
   }
 `;
