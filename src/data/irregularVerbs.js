@@ -402,7 +402,7 @@ export const irregularVerbs = [
     translate: 'покидати',
   },
   {
-    base: 'lent',
+    base: 'lend',
     pastSimple: 'lent',
     pastParticiple: 'lent',
     translate: 'позичати',
