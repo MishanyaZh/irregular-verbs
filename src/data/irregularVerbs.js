@@ -177,7 +177,7 @@ export const irregularVerbs = [
     base: 'deal',
     pastSimple: 'dealt',
     pastParticiple: 'dealt',
-    translate: 'відпускати',
+    translate: 'домовлятися',
   },
   // {
   //   base: 'dig',
@@ -339,7 +339,7 @@ export const irregularVerbs = [
     base: 'hit',
     pastSimple: 'hit',
     pastParticiple: 'hit',
-    translate: 'влучання',
+    translate: 'влучити',
   },
   {
     base: 'hold',
@@ -408,7 +408,7 @@ export const irregularVerbs = [
     translate: 'позичати',
   },
   {
-    base: 'lie',
+    base: 'lie down',
     pastSimple: 'lay',
     pastParticiple: 'lain',
     translate: 'лежати',
@@ -417,7 +417,7 @@ export const irregularVerbs = [
     base: 'lie',
     pastSimple: 'lied',
     pastParticiple: 'lied',
-    translate: 'збрехав',
+    translate: 'брехати',
   },
   {
     base: 'light',
@@ -440,7 +440,7 @@ export const irregularVerbs = [
   {
     base: 'may',
     pastSimple: 'might',
-    pastParticiple: '…',
+    pastParticiple: 'might',
     translate: 'могти',
   },
   {

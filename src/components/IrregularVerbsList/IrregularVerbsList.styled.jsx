@@ -47,4 +47,9 @@ export const StyledTableCell = styled(TableCell)`
 
 export const Container = styled.div`
   margin: 0 auto;
+  max-width: 768px;
+`;
+
+export const ContentBox = styled.div`
+  box-shadow: 0 0 400px rgb(255 255 255);
 `;

@@ -16,6 +16,7 @@ import {
   StyledTableCell,
   StyledTableRow,
   StyledEyeIcon,
+  ContentBox,
 } from './IrregularVerbsList.styled';
 
 const IrregularVerbsList = () => {
@@ -67,44 +68,46 @@ const IrregularVerbsList = () => {
 
   return (
     <Container>
-      <Actions
-        getFilteredData={getFilteredData}
-        inputValue={inputValue}
-        handleChange={handleChange}
-        verbs={state.verbs}
-        translate={state.translate}
-      />
-      <TableContainer component={Paper}>
-        <Table aria-label="customized table">
-          <StyledTableHead>
-            <TableRow>
-              {tableHeaderData.map((item, index) => (
-                <StyledTableCellHead key={index}>{item}</StyledTableCellHead>
-              ))}
-            </TableRow>
-          </StyledTableHead>
-          <TableBody>
-            {filteredData.map(
-              ({ base, pastSimple, pastParticiple, translate }, index) => (
-                <StyledTableRow key={index}>
-                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                    {getVisibleVerbs(state.verbs, index, base)}
-                  </StyledTableCell>
-                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                    {getVisibleVerbs(state.verbs, index, pastSimple)}
-                  </StyledTableCell>
-                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                    {getVisibleVerbs(state.verbs, index, pastParticiple)}
-                  </StyledTableCell>
-                  <StyledTableCell onClick={() => hendleClickVisible(index)}>
-                    {getVisibleVerbs(state.translate, index, translate)}
-                  </StyledTableCell>
-                </StyledTableRow>
-              ),
-            )}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <ContentBox>
+        <Actions
+          getFilteredData={getFilteredData}
+          inputValue={inputValue}
+          handleChange={handleChange}
+          verbs={state.verbs}
+          translate={state.translate}
+        />
+        <TableContainer component={Paper}>
+          <Table aria-label="customized table">
+            <StyledTableHead>
+              <TableRow>
+                {tableHeaderData.map((item, index) => (
+                  <StyledTableCellHead key={index}>{item}</StyledTableCellHead>
+                ))}
+              </TableRow>
+            </StyledTableHead>
+            <TableBody>
+              {filteredData.map(
+                ({ base, pastSimple, pastParticiple, translate }, index) => (
+                  <StyledTableRow key={index}>
+                    <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                      {getVisibleVerbs(state.verbs, index, base)}
+                    </StyledTableCell>
+                    <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                      {getVisibleVerbs(state.verbs, index, pastSimple)}
+                    </StyledTableCell>
+                    <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                      {getVisibleVerbs(state.verbs, index, pastParticiple)}
+                    </StyledTableCell>
+                    <StyledTableCell onClick={() => hendleClickVisible(index)}>
+                      {getVisibleVerbs(state.translate, index, translate)}
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ),
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </ContentBox>
     </Container>
   );
 };
